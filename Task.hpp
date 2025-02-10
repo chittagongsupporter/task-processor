@@ -27,6 +27,6 @@ private:
   int id;
   std::string title;
   bool isCompleted;
-}
+};
 
 #endif // TASK_HPP

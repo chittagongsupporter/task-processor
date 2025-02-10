@@ -27,5 +27,5 @@ int main() {
   taskManager1.addTask(task3);
   taskManager1.displayTasks();
 
-  std::cout << "Hello World!\n";
+  return 0;
 }
