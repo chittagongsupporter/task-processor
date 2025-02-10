@@ -21,7 +21,7 @@ public:
 
     // Member functions
     void addTask(const Task& task);
-    void removeTask(int id);
+    bool removeTask(int id);
     void displayTasks() const;
 
 private:

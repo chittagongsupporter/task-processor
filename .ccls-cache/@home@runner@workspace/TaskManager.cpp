@@ -18,13 +18,14 @@ void TaskManager::setTasks(const std::vector<Task> &tasks) {
 // Member functions
 void TaskManager::addTask(const Task &task) { tasks.push_back(task); }
 
-void TaskManager::removeTask(int id) {
+bool TaskManager::removeTask(int id) {
   for (auto it = tasks.begin(); it != tasks.end(); ++it) {
     if (it->getId() == id) {
       tasks.erase(it);
-      break;
+      return true;
     }
   }
+  return false;
 }
 void TaskManager::displayTasks() const {
   for (const auto &task : tasks) {

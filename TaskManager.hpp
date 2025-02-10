@@ -4,28 +4,29 @@
 #include <vector>
 #include "Task.hpp"
 
+/// Manages a Vector of Tasks objects
 class TaskManager
 {
 public:
-    // Default constructor
+    /// Default constructor
     TaskManager();
 
-    // Parameterized constructor
+    /// Parameterized constructor
     TaskManager(const std::vector<Task>& tasks);
 
-    // Getters
+    /// Getters
     const std::vector<Task>& getTasks() const;
 
-    // Setters
+    /// Setters
     void setTasks(const std::vector<Task>& tasks);
 
-    // Member functions
+    /// Member functions
     void addTask(const Task& task);
-    void removeTask(int id);
+    bool removeTask(int id);
     void displayTasks() const;
 
 private:
-    // Data members
+    /// Data members
     std::vector<Task> tasks;
 };
 
