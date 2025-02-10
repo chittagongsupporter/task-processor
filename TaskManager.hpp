@@ -8,26 +8,32 @@
 class TaskManager
 {
 public:
-    /// Default constructor
-    TaskManager();
+  /// Constructors:
+  /// Default constructor
+  TaskManager();
 
-    /// Parameterized constructor
-    TaskManager(const std::vector<Task>& tasks);
+  /// Parameterized constructor
+  TaskManager(const std::vector<Task>& tasks);
 
-    /// Getters
-    const std::vector<Task>& getTasks() const;
+  /// Getters:
+  const std::vector<Task>& getTasks() const;
 
-    /// Setters
-    void setTasks(const std::vector<Task>& tasks);
+  /// Setters:
+  void setTasks(const std::vector<Task>& tasks);
 
-    /// Member functions
-    void addTask(const Task& task);
-    bool removeTask(int id);
-    void displayTasks() const;
+  /// Member functions:
+  /// Add task to tasks vector
+  void addTask(const Task& task);
+
+  /// Remove task from tasks vector, return true if successful else false
+  bool removeTask(int id);
+
+  /// Display each tasks' corresponding ID, title, completion status, in tasks vector
+  void displayTasks() const;
 
 private:
-    /// Data members
-    std::vector<Task> tasks;
+  /// Data members
+  std::vector<Task> tasks;
 };
 
 #endif // TASKMANAGER_HPP

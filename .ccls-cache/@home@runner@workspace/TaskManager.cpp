@@ -27,6 +27,7 @@ bool TaskManager::removeTask(int id) {
   }
   return false;
 }
+
 void TaskManager::displayTasks() const {
   for (const auto &task : tasks) {
     std::cout << "ID: " << task.getId() << ", Title: " << task.getTitle()
